@@ -2,14 +2,15 @@
 Small python CLI tool to automatically generate a simplified API schema.
 
 ## Usage
-Make sure your `domain` in the `main` function is correct and complete, containing any versioning or other API details like `api.domain.com/v1` if applicable. Only the `endpoint` argument is required. 
+Make sure your `domain` in the `main` function is correct and complete, containing any versioning or other API details like `api.domain.com/v1` if applicable. Only the `domain` and `endpoint` arguments are required. 
 
 **Call Without Params**
 ```bash
-python main.py --endpoint='endpoint/etc'
+python main.py --'domain.com' --endpoint='endpoint/etc'
 ```
 
 **Call With Params**
+multiple parameters can be used if they are comma-separated within the dictionary string
 ```bash
-python main.py --endpoint='endpoint/{key}/etc' --params='{"key": "value"}'
+python main.py --'domain.com' --endpoint='endpoint/{key}/etc' --params='{"key": "value"}'
 ```
