@@ -9,6 +9,8 @@ def digest(data: dict | list, depth: int = 0, path: str = "", meta: dict = {}):
             meta[f"{path}{k}"] = {"depth": depth, "type": type(v).__name__}
             if isinstance(v, (dict, list)):
                 digest(data=v, depth=depth + 1, path=f"{path}{k}/", meta=meta)
+            else:
+                meta[f"{path}{k}"].update({"example": v})
 
     elif isinstance(data, list):
         for v in data:
@@ -32,13 +34,11 @@ def merge(schema: dict, path: list, value: dict):
         if p not in current:
             current[p] = {}
 
-        node = current[p]
         if i == len(path) - 1:
-            node.update(value)
-            node.setdefault("children", {})
+            current[p].update(value)
         else:
-            node.setdefault("children", {})
-            current = node["children"]
+            current[p].setdefault("children", {})
+            current = current[p]["children"]
 
 def main(domain: str, endpoint: str, params: dict):
     url = f"https://{domain}/{endpoint.format(**params)}"

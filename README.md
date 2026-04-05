@@ -1,8 +1,8 @@
 # About
-Small python CLI tool to automatically generate a simplified API schema.
+Small python CLI tool to automatically generate a simple API schema.
 
 ## Usage
-Make sure your `domain` in the `main` function is correct and complete, containing any versioning or other API details like `api.domain.com/v1` if applicable. Only the `domain` and `endpoint` arguments are required. 
+Make sure your `domain` is correct and complete, containing any versioning or other API details like `api.domain.com/v1` if applicable. Only the `domain` and `endpoint` arguments are required. 
 
 **Call Without Params**
 ```bash
