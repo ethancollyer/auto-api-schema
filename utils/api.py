@@ -1,16 +1,16 @@
-def digest(data: dict | list, depth: int = 0, path: str = "", meta: dict = {}):
+def digest(data: dict | list, path: str = "", meta: dict = {}):
     """Flattens each object in the API response into a dictionary object containing {path: details}."""
     if isinstance(data, dict):
         for k, v in data.items():
-            meta[f"{path}{k}"] = {"depth": depth, "type": type(v).__name__}
+            meta[f"{path}{k}"] = {"path": path if path else None, "type": type(v).__name__}
             if isinstance(v, (dict, list)):
-                digest(data=v, depth=depth + 1, path=f"{path}{k}/", meta=meta)
+                digest(data=v, path=f"{path}{k}/", meta=meta)
             else:
                 meta[f"{path}{k}"].update({"example": v})
 
     elif isinstance(data, list):
         for v in data:
-            digest(data=v, depth=depth, path=path, meta=meta)
+            digest(data=v, path=path, meta=meta)
 
     return meta
 
