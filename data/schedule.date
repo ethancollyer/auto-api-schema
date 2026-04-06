@@ -1,0 +1,847 @@
+{
+  "nextStartDate": {
+    "path": null,
+    "type": "str",
+    "example": "2026-04-13"
+  },
+  "previousStartDate": {
+    "path": null,
+    "type": "str",
+    "example": "2026-03-30"
+  },
+  "gameWeek": {
+    "path": null,
+    "type": "list",
+    "children": {
+      "date": {
+        "path": "gameWeek.",
+        "type": "str",
+        "example": "2026-04-12"
+      },
+      "dayAbbrev": {
+        "path": "gameWeek.",
+        "type": "str",
+        "example": "SUN"
+      },
+      "numberOfGames": {
+        "path": "gameWeek.",
+        "type": "int",
+        "example": 6
+      },
+      "datePromo": {
+        "path": "gameWeek.",
+        "type": "list"
+      },
+      "games": {
+        "path": "gameWeek.",
+        "type": "list",
+        "children": {
+          "id": {
+            "path": "gameWeek.games.",
+            "type": "int",
+            "example": 2025021281
+          },
+          "season": {
+            "path": "gameWeek.games.",
+            "type": "int",
+            "example": 20252026
+          },
+          "gameType": {
+            "path": "gameWeek.games.",
+            "type": "int",
+            "example": 2
+          },
+          "venue": {
+            "path": "gameWeek.games.",
+            "type": "dict",
+            "children": {
+              "default": {
+                "path": "gameWeek.games.venue.",
+                "type": "str",
+                "example": "Scotiabank Saddledome"
+              },
+              "es": {
+                "path": "gameWeek.games.venue.",
+                "type": "str",
+                "example": "SAP Center en San Jose"
+              },
+              "fr": {
+                "path": "gameWeek.games.venue.",
+                "type": "str",
+                "example": "SAP Center de San Jose"
+              }
+            }
+          },
+          "neutralSite": {
+            "path": "gameWeek.games.",
+            "type": "bool",
+            "example": false
+          },
+          "startTimeUTC": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "2026-04-13T01:00:00Z"
+          },
+          "easternUTCOffset": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "-04:00"
+          },
+          "venueUTCOffset": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "-06:00"
+          },
+          "venueTimezone": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "US/Mountain"
+          },
+          "gameState": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "FUT"
+          },
+          "gameScheduleState": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "OK"
+          },
+          "tvBroadcasts": {
+            "path": "gameWeek.games.",
+            "type": "list",
+            "children": {
+              "id": {
+                "path": "gameWeek.games.tvBroadcasts.",
+                "type": "int",
+                "example": 558
+              },
+              "market": {
+                "path": "gameWeek.games.tvBroadcasts.",
+                "type": "str",
+                "example": "A"
+              },
+              "countryCode": {
+                "path": "gameWeek.games.tvBroadcasts.",
+                "type": "str",
+                "example": "US"
+              },
+              "network": {
+                "path": "gameWeek.games.tvBroadcasts.",
+                "type": "str",
+                "example": "Utah16"
+              },
+              "sequenceNumber": {
+                "path": "gameWeek.games.tvBroadcasts.",
+                "type": "int",
+                "example": 381
+              }
+            }
+          },
+          "awayTeam": {
+            "path": "gameWeek.games.",
+            "type": "dict",
+            "children": {
+              "id": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "int",
+                "example": 68
+              },
+              "commonName": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "dict",
+                "children": {
+                  "default": {
+                    "path": "gameWeek.games.awayTeam.commonName.",
+                    "type": "str",
+                    "example": "Mammoth"
+                  },
+                  "fr": {
+                    "path": "gameWeek.games.awayTeam.commonName.",
+                    "type": "str",
+                    "example": "S\u00e9nateurs"
+                  }
+                }
+              },
+              "placeName": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "dict",
+                "children": {
+                  "default": {
+                    "path": "gameWeek.games.awayTeam.placeName.",
+                    "type": "str",
+                    "example": "Utah"
+                  },
+                  "fr": {
+                    "path": "gameWeek.games.awayTeam.placeName.",
+                    "type": "str",
+                    "example": "Philadelphie"
+                  }
+                }
+              },
+              "placeNameWithPreposition": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "dict",
+                "children": {
+                  "default": {
+                    "path": "gameWeek.games.awayTeam.placeNameWithPreposition.",
+                    "type": "str",
+                    "example": "Utah"
+                  },
+                  "fr": {
+                    "path": "gameWeek.games.awayTeam.placeNameWithPreposition.",
+                    "type": "str",
+                    "example": "de l'Utah"
+                  }
+                }
+              },
+              "abbrev": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "str",
+                "example": "UTA"
+              },
+              "logo": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg?season=20252026"
+              },
+              "darkLogo": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg?season=20252026"
+              },
+              "awaySplitSquad": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "bool",
+                "example": false
+              },
+              "radioLink": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "str",
+                "example": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20252026/UTA-radio.m3u8"
+              },
+              "odds": {
+                "path": "gameWeek.games.awayTeam.",
+                "type": "list",
+                "children": {
+                  "providerId": {
+                    "path": "gameWeek.games.awayTeam.odds.",
+                    "type": "int",
+                    "example": 10
+                  },
+                  "value": {
+                    "path": "gameWeek.games.awayTeam.odds.",
+                    "type": "str",
+                    "example": "2.90"
+                  }
+                }
+              }
+            }
+          },
+          "homeTeam": {
+            "path": "gameWeek.games.",
+            "type": "dict",
+            "children": {
+              "id": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "int",
+                "example": 20
+              },
+              "commonName": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "dict",
+                "children": {
+                  "default": {
+                    "path": "gameWeek.games.homeTeam.commonName.",
+                    "type": "str",
+                    "example": "Flames"
+                  },
+                  "fr": {
+                    "path": "gameWeek.games.homeTeam.commonName.",
+                    "type": "str",
+                    "example": "S\u00e9nateurs"
+                  }
+                }
+              },
+              "placeName": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "dict",
+                "children": {
+                  "default": {
+                    "path": "gameWeek.games.homeTeam.placeName.",
+                    "type": "str",
+                    "example": "Calgary"
+                  },
+                  "fr": {
+                    "path": "gameWeek.games.homeTeam.placeName.",
+                    "type": "str",
+                    "example": "Caroline"
+                  }
+                }
+              },
+              "placeNameWithPreposition": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "dict",
+                "children": {
+                  "default": {
+                    "path": "gameWeek.games.homeTeam.placeNameWithPreposition.",
+                    "type": "str",
+                    "example": "Calgary"
+                  },
+                  "fr": {
+                    "path": "gameWeek.games.homeTeam.placeNameWithPreposition.",
+                    "type": "str",
+                    "example": "de Calgary"
+                  }
+                }
+              },
+              "abbrev": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "str",
+                "example": "CGY"
+              },
+              "logo": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg"
+              },
+              "darkLogo": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg"
+              },
+              "homeSplitSquad": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "bool",
+                "example": false
+              },
+              "radioLink": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "str",
+                "example": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20252026/CGY-radio.m3u8"
+              },
+              "odds": {
+                "path": "gameWeek.games.homeTeam.",
+                "type": "list",
+                "children": {
+                  "providerId": {
+                    "path": "gameWeek.games.homeTeam.odds.",
+                    "type": "int",
+                    "example": 10
+                  },
+                  "value": {
+                    "path": "gameWeek.games.homeTeam.odds.",
+                    "type": "str",
+                    "example": "2.25"
+                  }
+                }
+              }
+            }
+          },
+          "periodDescriptor": {
+            "path": "gameWeek.games.",
+            "type": "dict",
+            "children": {
+              "number": {
+                "path": "gameWeek.games.periodDescriptor.",
+                "type": "int",
+                "example": 1
+              },
+              "periodType": {
+                "path": "gameWeek.games.periodDescriptor.",
+                "type": "str",
+                "example": "REG"
+              },
+              "maxRegulationPeriods": {
+                "path": "gameWeek.games.periodDescriptor.",
+                "type": "int",
+                "example": 3
+              }
+            }
+          },
+          "ticketsLink": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "https://www.ticketmaster.ca/event/110062F6D2375030?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_SCHED_PG_GM39&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=SCHED_PG_GM39"
+          },
+          "ticketsLinkFr": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "https://www.ticketmaster.ca/event/110062F6D2375030?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_SCHED_PG_GM39&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=SCHED_PG_GM39"
+          },
+          "gameCenterLink": {
+            "path": "gameWeek.games.",
+            "type": "str",
+            "example": "/gamecenter/uta-vs-cgy/2026/04/12/2025021281"
+          }
+        }
+      }
+    }
+  },
+  "": {
+    "children": {
+      "gameWeekdate": {
+        "path": ".gameWeek",
+        "type": "str",
+        "example": "2026-04-12"
+      },
+      "gameWeekdayAbbrev": {
+        "path": ".gameWeek",
+        "type": "str",
+        "example": "SUN"
+      },
+      "gameWeeknumberOfGames": {
+        "path": ".gameWeek",
+        "type": "int",
+        "example": 6
+      },
+      "gameWeekdatePromo": {
+        "path": ".gameWeek",
+        "type": "list"
+      },
+      "gameWeekgames": {
+        "path": ".gameWeek",
+        "type": "list"
+      },
+      "gameWeek": {
+        "children": {
+          "gamesid": {
+            "path": ".gameWeek.games",
+            "type": "int",
+            "example": 2025021281
+          },
+          "gamesseason": {
+            "path": ".gameWeek.games",
+            "type": "int",
+            "example": 20252026
+          },
+          "gamesgameType": {
+            "path": ".gameWeek.games",
+            "type": "int",
+            "example": 2
+          },
+          "gamesvenue": {
+            "path": ".gameWeek.games",
+            "type": "dict"
+          },
+          "games": {
+            "children": {
+              "venuedefault": {
+                "path": ".gameWeek.games.venue",
+                "type": "str",
+                "example": "Scotiabank Saddledome"
+              },
+              "tvBroadcastsid": {
+                "path": ".gameWeek.games.tvBroadcasts",
+                "type": "int",
+                "example": 558
+              },
+              "tvBroadcastsmarket": {
+                "path": ".gameWeek.games.tvBroadcasts",
+                "type": "str",
+                "example": "A"
+              },
+              "tvBroadcastscountryCode": {
+                "path": ".gameWeek.games.tvBroadcasts",
+                "type": "str",
+                "example": "US"
+              },
+              "tvBroadcastsnetwork": {
+                "path": ".gameWeek.games.tvBroadcasts",
+                "type": "str",
+                "example": "Utah16"
+              },
+              "tvBroadcastssequenceNumber": {
+                "path": ".gameWeek.games.tvBroadcasts",
+                "type": "int",
+                "example": 381
+              },
+              "awayTeamid": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "int",
+                "example": 68
+              },
+              "awayTeamcommonName": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "dict"
+              },
+              "awayTeam": {
+                "children": {
+                  "commonNamedefault": {
+                    "path": ".gameWeek.games.awayTeam.commonName",
+                    "type": "str",
+                    "example": "Mammoth"
+                  },
+                  "placeNamedefault": {
+                    "path": ".gameWeek.games.awayTeam.placeName",
+                    "type": "str",
+                    "example": "Utah"
+                  },
+                  "placeNameWithPrepositiondefault": {
+                    "path": ".gameWeek.games.awayTeam.placeNameWithPreposition",
+                    "type": "str",
+                    "example": "Utah"
+                  },
+                  "placeNameWithPrepositionfr": {
+                    "path": ".gameWeek.games.awayTeam.placeNameWithPreposition",
+                    "type": "str",
+                    "example": "de l'Utah"
+                  },
+                  "oddsproviderId": {
+                    "path": ".gameWeek.games.awayTeam.odds",
+                    "type": "int",
+                    "example": 10
+                  },
+                  "oddsvalue": {
+                    "path": ".gameWeek.games.awayTeam.odds",
+                    "type": "str",
+                    "example": "2.90"
+                  },
+                  "placeNamefr": {
+                    "path": ".gameWeek.games.awayTeam.placeName",
+                    "type": "str",
+                    "example": "Philadelphie"
+                  },
+                  "commonNamefr": {
+                    "path": ".gameWeek.games.awayTeam.commonName",
+                    "type": "str",
+                    "example": "S\u00e9nateurs"
+                  }
+                }
+              },
+              "awayTeamplaceName": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "dict"
+              },
+              "awayTeamplaceNameWithPreposition": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "dict"
+              },
+              "awayTeamabbrev": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "str",
+                "example": "UTA"
+              },
+              "awayTeamlogo": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg?season=20252026"
+              },
+              "awayTeamdarkLogo": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg?season=20252026"
+              },
+              "awayTeamawaySplitSquad": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "bool",
+                "example": false
+              },
+              "awayTeamradioLink": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "str",
+                "example": "https://d2igy0yla8zi0u.cloudfront.net/UTA/20252026/UTA-radio.m3u8"
+              },
+              "awayTeamodds": {
+                "path": ".gameWeek.games.awayTeam",
+                "type": "list"
+              },
+              "homeTeamid": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "int",
+                "example": 20
+              },
+              "homeTeamcommonName": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "dict"
+              },
+              "homeTeam": {
+                "children": {
+                  "commonNamedefault": {
+                    "path": ".gameWeek.games.homeTeam.commonName",
+                    "type": "str",
+                    "example": "Flames"
+                  },
+                  "placeNamedefault": {
+                    "path": ".gameWeek.games.homeTeam.placeName",
+                    "type": "str",
+                    "example": "Calgary"
+                  },
+                  "placeNameWithPrepositiondefault": {
+                    "path": ".gameWeek.games.homeTeam.placeNameWithPreposition",
+                    "type": "str",
+                    "example": "Calgary"
+                  },
+                  "placeNameWithPrepositionfr": {
+                    "path": ".gameWeek.games.homeTeam.placeNameWithPreposition",
+                    "type": "str",
+                    "example": "de Calgary"
+                  },
+                  "oddsproviderId": {
+                    "path": ".gameWeek.games.homeTeam.odds",
+                    "type": "int",
+                    "example": 10
+                  },
+                  "oddsvalue": {
+                    "path": ".gameWeek.games.homeTeam.odds",
+                    "type": "str",
+                    "example": "2.25"
+                  },
+                  "commonNamefr": {
+                    "path": ".gameWeek.games.homeTeam.commonName",
+                    "type": "str",
+                    "example": "S\u00e9nateurs"
+                  },
+                  "placeNamefr": {
+                    "path": ".gameWeek.games.homeTeam.placeName",
+                    "type": "str",
+                    "example": "Caroline"
+                  }
+                }
+              },
+              "homeTeamplaceName": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "dict"
+              },
+              "homeTeamplaceNameWithPreposition": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "dict"
+              },
+              "homeTeamabbrev": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "str",
+                "example": "CGY"
+              },
+              "homeTeamlogo": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg"
+              },
+              "homeTeamdarkLogo": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "str",
+                "example": "https://assets.nhle.com/logos/nhl/svg/CGY_dark.svg"
+              },
+              "homeTeamhomeSplitSquad": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "bool",
+                "example": false
+              },
+              "homeTeamradioLink": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "str",
+                "example": "https://d2igy0yla8zi0u.cloudfront.net/CGY/20252026/CGY-radio.m3u8"
+              },
+              "homeTeamodds": {
+                "path": ".gameWeek.games.homeTeam",
+                "type": "list"
+              },
+              "periodDescriptornumber": {
+                "path": ".gameWeek.games.periodDescriptor",
+                "type": "int",
+                "example": 1
+              },
+              "periodDescriptorperiodType": {
+                "path": ".gameWeek.games.periodDescriptor",
+                "type": "str",
+                "example": "REG"
+              },
+              "periodDescriptormaxRegulationPeriods": {
+                "path": ".gameWeek.games.periodDescriptor",
+                "type": "int",
+                "example": 3
+              },
+              "venuees": {
+                "path": ".gameWeek.games.venue",
+                "type": "str",
+                "example": "SAP Center en San Jose"
+              },
+              "venuefr": {
+                "path": ".gameWeek.games.venue",
+                "type": "str",
+                "example": "SAP Center de San Jose"
+              }
+            }
+          },
+          "gamesneutralSite": {
+            "path": ".gameWeek.games",
+            "type": "bool",
+            "example": false
+          },
+          "gamesstartTimeUTC": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "2026-04-13T01:00:00Z"
+          },
+          "gameseasternUTCOffset": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "-04:00"
+          },
+          "gamesvenueUTCOffset": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "-06:00"
+          },
+          "gamesvenueTimezone": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "US/Mountain"
+          },
+          "gamesgameState": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "FUT"
+          },
+          "gamesgameScheduleState": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "OK"
+          },
+          "gamestvBroadcasts": {
+            "path": ".gameWeek.games",
+            "type": "list"
+          },
+          "gamesawayTeam": {
+            "path": ".gameWeek.games",
+            "type": "dict"
+          },
+          "gameshomeTeam": {
+            "path": ".gameWeek.games",
+            "type": "dict"
+          },
+          "gamesperiodDescriptor": {
+            "path": ".gameWeek.games",
+            "type": "dict"
+          },
+          "gamesticketsLink": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "https://www.ticketmaster.ca/event/110062F6D2375030?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_SCHED_PG_GM39&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=SCHED_PG_GM39"
+          },
+          "gamesticketsLinkFr": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "https://www.ticketmaster.ca/event/110062F6D2375030?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_SCHED_PG_GM39&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=SCHED_PG_GM39"
+          },
+          "gamesgameCenterLink": {
+            "path": ".gameWeek.games",
+            "type": "str",
+            "example": "/gamecenter/uta-vs-cgy/2026/04/12/2025021281"
+          }
+        }
+      },
+      "oddsPartnerspartnerId": {
+        "path": ".oddsPartners",
+        "type": "int",
+        "example": 10
+      },
+      "oddsPartnerscountry": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "SK"
+      },
+      "oddsPartnersname": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "Doxxbet"
+      },
+      "oddsPartnersimageUrl": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "https://assets.nhle.com/betting_partner/doxxbet.svg"
+      },
+      "oddsPartnerssiteUrl": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "https://www.doxxbet.sk/sk/sportove-tipovanie-online/kurzy/ladovy-hokej/usa/nhl/?msID=21&mbID=27"
+      },
+      "oddsPartnersbgColor": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "#f30d31"
+      },
+      "oddsPartnerstextColor": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "#202020"
+      },
+      "oddsPartnersaccentColor": {
+        "path": ".oddsPartners",
+        "type": "str",
+        "example": "#ffffff"
+      }
+    }
+  },
+  "oddsPartners": {
+    "path": null,
+    "type": "list",
+    "children": {
+      "partnerId": {
+        "path": "oddsPartners.",
+        "type": "int",
+        "example": 10
+      },
+      "country": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "SK"
+      },
+      "name": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "Doxxbet"
+      },
+      "imageUrl": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "https://assets.nhle.com/betting_partner/doxxbet.svg"
+      },
+      "siteUrl": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "https://www.doxxbet.sk/sk/sportove-tipovanie-online/kurzy/ladovy-hokej/usa/nhl/?msID=21&mbID=27"
+      },
+      "bgColor": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "#f30d31"
+      },
+      "textColor": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "#202020"
+      },
+      "accentColor": {
+        "path": "oddsPartners.",
+        "type": "str",
+        "example": "#ffffff"
+      }
+    }
+  },
+  "preSeasonStartDate": {
+    "path": null,
+    "type": "str",
+    "example": "2025-09-20"
+  },
+  "regularSeasonStartDate": {
+    "path": null,
+    "type": "str",
+    "example": "2025-10-07"
+  },
+  "regularSeasonEndDate": {
+    "path": null,
+    "type": "str",
+    "example": "2026-04-17"
+  },
+  "playoffEndDate": {
+    "path": null,
+    "type": "str",
+    "example": "2026-06-15"
+  },
+  "numberOfGames": {
+    "path": null,
+    "type": "int",
+    "example": 53
+  }
+}

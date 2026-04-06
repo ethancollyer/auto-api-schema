@@ -4,7 +4,7 @@ def digest(data: dict | list, path: str = "", meta: dict = {}):
         for k, v in data.items():
             meta[f"{path}{k}"] = {"path": path if path else None, "type": type(v).__name__}
             if isinstance(v, (dict, list)):
-                digest(data=v, path=f"{path}{k}/", meta=meta)
+                digest(data=v, path=f"{path}{k}.", meta=meta)
             else:
                 meta[f"{path}{k}"].update({"example": v})
 
@@ -17,7 +17,7 @@ def digest(data: dict | list, path: str = "", meta: dict = {}):
 def build(meta: dict, schema: dict = {}):
     """Loops through the flattened API response data that was created by the digest function."""
     for key, value in meta.items():
-        path = key.split('/')
+        path = key.split('.')
         merge(schema=schema, path=path, value=value)
 
     return schema
