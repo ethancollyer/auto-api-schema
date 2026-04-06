@@ -5,7 +5,7 @@ def flatten(data: dict | list, path: str = "", meta: dict = {}):
     """Flattens each object in the API response into a dictionary object containing {path: details}."""
     if isinstance(data, dict):
         for k, v in data.items():
-            meta[f"{path}{k}"] = {"path": path if path else None, "type": type(v).__name__}
+            meta[f"{path}{k}"] = {"path": f"{path}{k}" if path else k, "type": type(v).__name__}
             if isinstance(v, (dict, list)):
                 flatten(data=v, path=f"{path}{k}.", meta=meta)
             else:
